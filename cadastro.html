@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+
+<title>Cadastro</title>
+
+<link rel="icon" href="imagens/logo.jpg">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+<style type="text/css">
+	body {
+		padding-top: 120px;
+		color: #fff;
+		background: white;
+		font-family: 'Roboto', sans-serif;
+	}
+	.form-control, .form-control:focus, .input-group-addon {
+		border-color: #e1e1e1;
+	}
+    .form-control, .btn {        
+        border-radius: 3px;
+    }
+	.formulario-cadastro {
+		width: 390px;
+		margin: 0 auto;
+		padding: 30px 0;
+	}
+    .formulario-cadastro form {
+		color: #999;
+		border-radius: 3px;
+    	margin-bottom: 15px;
+        background: #fff;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+    }
+	.formulario-cadastro h2 {
+		color: #333;
+		font-weight: bold;
+        margin-top: 0;
+    }
+    .formulario-cadastro hr {
+        margin: 0 -30px 20px;
+    }
+	.formulario-cadastro .form-group {
+		margin-bottom: 20px;
+	}
+	.formulario-cadastro label {
+		font-weight: normal;
+		font-size: 13px;
+	}
+	.formulario-cadastro.form-control {
+		min-height: 38px;
+		box-shadow: none !important;
+	}	
+	.formulario-cadastro .input-group-addon {
+		max-width: 42px;
+		text-align: center;
+	}
+	.formulario-cadastro input[type="checkbox"] {
+		margin-top: 2px;
+	}   
+    .formulario-cadastro .btn{        
+        font-size: 16px;
+        font-weight: bold;
+		background: #19aa8d;
+		border: none;
+		min-width: 140px;
+    }
+	.formulario-cadastro .btn:hover, .signup-form .btn:focus {
+		background: #179b81;
+        outline: none;
+	}
+	.formulario-cadastro a {
+		color: #fff;	
+		text-decoration: underline;
+	}
+	.formulario-cadastro a:hover {
+		text-decoration: none;
+	}
+	.formulario-cadastro form a {
+		color: #19aa8d;
+		text-decoration: none;
+	}	
+	.formulario-cadastro form a:hover {
+		text-decoration: underline;
+	}
+	.formulario-cadastro .fa {
+		font-size: 21px;
+	}
+	.formulario-cadastro.fa-paper-plane {
+		font-size: 18px;
+	}
+	.formulario-cadastro .fa-check {
+		color: #fff;
+		left: 17px;
+		top: 18px;
+		font-size: 7px;
+		position: absolute;
+	}
+
+/* -- Barra de navegação -- */
+
+nav.navbar-transparente {
+  padding: 15px 0px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+}
+
+.navbar-brand {
+  padding: 5px 15px;
+}
+
+.divisor {
+  width: 1px;
+  height: 16px;
+  background: white;
+  margin: 16px 10px;
+}
+
+.navbar-inverse .navbar-nav > li > a,
+footer .nav a {
+  color: white;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+footer .nav a:hover {
+  color: #9bf0e1;
+  background: none;
+}
+
+#rodape h4 {
+  color: #919496;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+footer {
+    background: #000;
+    padding: 50px 0px 20px 0px;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+}
+
+.item-rede-social {
+    float: right;
+}
+
+
+</style>
+</head>
+<body>
+	<!--Barra de navegação -->
+	<nav class="navbar-fixed-top navbar-inverse navbar-transparente">
+        <div class="container">
+
+            <!-- header -->
+            <div class="navbar-header">
+
+                <!-- botao toggle -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-navegacao">
+                <span class="sr-only">alternar navegação</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+             </button>
+
+            </div>
+
+            <!-- navbar -->
+            <div class="collapse navbar-collapse" id="barra-navegacao">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home.html">Home</a></li>
+                     <li class="divisor" role="separator"></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li class="divisor" role="separator"></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /container -->
+    </nav>
+    <!-- /nav -->
+
+	<!-- Formulário de cadastro -->
+<div class="formulario-cadastro">
+    <form action="/examples/actions/confirmation.php" method="post">
+		<h2>Cadastre-se</h2>
+		<p>Por favor preencha o formulário para criar uma conta!</p>
+		<hr>
+        <div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-user"></i></span>
+				<input type="texto" class="form-control" name="usuario" placeholder="Usuário" required="required">
+			</div>
+        </div>
+        <div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+				<input type="email" class="form-control" name="email" placeholder="Email" required="required">
+			</div>
+        </div>
+		<div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+				<input type="texto" class="form-control" name="senha" placeholder="Senha" required="required">
+			</div>
+        </div>
+		<div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon">
+					<i class="fa fa-lock"></i>
+					<i class="fa fa-check"></i>
+				</span>
+				<input type="texto" class="form-control" name="confirmar_senha" placeholder="Confirmar Senha" required="required">
+			</div>
+        </div>
+		<div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
+        </div>
+    </form>
+	<div class="text-center">Já possui uma conta? <a href="login.html">Entrar aqui</a></div>
+</div>
+
+<footer id="rodape">
+        <div class="row">
+                
+            <div class="col-md-4" align="center">
+                <h4>Links úteis</h4>
+                <ul class="nav">
+                    <li><a href="entre_contato.html">Entre em Contato</a></li>
+                    <li><a href="localizacao.html">Localização</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="nav">
+                    <li class="item-rede-social">
+                        <a href="https://www.facebook.com/Crosstrainingbox360/"><img src="imagens/facebook.png"></a>
+                    </li>
+                    <li class="item-rede-social">
+                        <a href="https://www.instagram.com/box360_crosstraining/"><img src="imagens/instagram.png"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>                            
